@@ -37,7 +37,7 @@
         <h1>
             Toto Corp
         </h1>
-        <p style="white-space: nowrap;">Current money flowing: <span id="money" style="font-size: x-large;">30000</span>€</p>
+        <p style="white-space: nowrap;">Current money flowing: <span id="money" style="font-size: x-large;">0</span>€</p>
         <img src="reality.png" alt="Man looking into the future" />
         <p>
             We built <strong>yesterday</strong> the future of <strong>tomorrow.</strong>
@@ -52,13 +52,13 @@
                 max = 2;
                 var rand = Math.floor(Math.random() * (max - min + 1) + min);
 
-                var money = parseInt(document.getElementById("money").innerHTML);
-                money = money + Math.floor(Math.random() * (5000 - 300 + 1) + 300);
+                var money = (((new Date().getTime() - 1623685369345) / 1000) * 1000).toLocaleString();
                 document.getElementById("money").innerHTML = money;
                 setTimeout(lol, rand * 1000);
             }
 
-            document.getElementById("money").innerHTML =  Math.floor(Math.random() * (50000 - 30000 + 1) + 30000);
+            var plop = (new Date().getTime() - 1623685369345) / 1000
+            document.getElementById("money").innerHTML =  plop.toLocaleString();
             lol()
         </script>
     </body>
